@@ -113,5 +113,103 @@ Request Body: Brak
 Odpowiedź:
 HTTP Code: 200 OK
 Body:
-
+[
+    {
+        "id": 1,
+        "name": "Metodologie Obiektowe",
+        "ects": 2,
+        "room": "216",
+        "exam": "tak"
+    },
+    {
+        "id": 6,
+        "name": "Technologie komponentowe i sieciowe",
+        "ects": 2,
+        "room": "208",
+        "exam": "tak"
+    }
+]
 ```
+
+4.  Pobranie przedmiotów, które odbywają się w sali 216
+```
+Metoda: GET
+Adres zasobu: localhost:8080/api/subjects?room=216
+Nagłówki: Content-Type: application/json
+Request Body: Brak
+
+Odpowiedź:
+HTTP Code: 200 OK
+Body:
+[
+    {
+        "id": 1,
+        "name": "Metodologie Obiektowe",
+        "ects": 2,
+        "room": "216",
+        "exam": "tak"
+    },
+    {
+        "id": 2,
+        "name": "Testowanie oprogramowania",
+        "ects": 1,
+        "room": "216",
+        "exam": "nie"
+    },
+    {
+        "id": 4,
+        "name": "Zarządzanie projektem informatycznym",
+        "ects": 2,
+        "room": "216",
+        "exam": "nie"
+    }
+]
+```
+
+5. Pobranie przedmiotów które nie mają egzaminu i odbywają się w sali 208
+```
+Metoda: GET
+Adres zasobu: localhost:8080/api/subjects?room=208&exam=nie
+Nagłówki: Content-Type: application/json
+Request Body: Brak
+
+Odpowiedź:
+HTTP Code: 200 OK
+Body:
+[
+    {
+        "id": 3,
+        "name": "Technologie i aplikacje webowe",
+        "ects": 3,
+        "room": "208",
+        "exam": "nie"
+    },
+    {
+        "id": 5,
+        "name": "Zaawansowane technologie bazodanowe",
+        "ects": 3,
+        "room": "208",
+        "exam": "nie"
+    }
+]
+```
+
+6. Pobranie przedmiotu o identyfikatorze 3
+```
+Metoda: GET
+Adres zasobu: localhost:8080/api/subjects/3
+Nagłówki: Content-Type: application/json
+Request Body: Brak
+
+Odpowiedź:
+HTTP Code: 200 OK
+Body:
+{
+    "id": 3,
+    "name": "Technologie i aplikacje webowe",
+    "ects": 3,
+    "room": "208",
+    "exam": "nie"
+}
+```
+7. 

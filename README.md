@@ -212,4 +212,95 @@ Body:
     "exam": "nie"
 }
 ```
-7. 
+7. Pobranie przedmiotu o identyfikatorze 15
+```
+Metoda: GET
+Adres zasobu: localhost:8080/api/subjects/15
+Nagłówki: Content-Type: application/json
+Request Body: Brak
+
+Odpowiedź:
+HTTP Code: 404 NOT FOUND
+Body: Brak
+```
+8. Usunięcie przedmiotu o identyfikatorze 2
+```
+Metoda: DELETE
+Adres zasobu: localhost:8080/api/subjects/2
+Nagłówki: Content-Type: application/json
+Request Body: Brak
+
+Odpowiedź:
+HTTP Code: 204 NO CONTENT
+Body: Brak
+```
+9. Pobranie wszystkich przedmiotów
+```
+Metoda: GET
+Adres zasobu: localhost:8080/api/subjects
+Nagłówki: Content-Type: application/json
+Request Body: Brak
+
+Odpowiedź:
+HTTP Code: 200 OK
+Body: 
+[
+    {
+        "id": 1,
+        "name": "Metodologie Obiektowe",
+        "ects": 2,
+        "room": "216",
+        "exam": "tak"
+    },
+    {
+        "id": 3,
+        "name": "Technologie i aplikacje webowe",
+        "ects": 3,
+        "room": "208",
+        "exam": "nie"
+    },
+    {
+        "id": 4,
+        "name": "Zarządzanie projektem informatycznym",
+        "ects": 2,
+        "room": "216",
+        "exam": "nie"
+    },
+    {
+        "id": 5,
+        "name": "Zaawansowane technologie bazodanowe",
+        "ects": 3,
+        "room": "208",
+        "exam": "nie"
+    },
+    {
+        "id": 6,
+        "name": "Technologie komponentowe i sieciowe",
+        "ects": 2,
+        "room": "208",
+        "exam": "tak"
+    }
+]
+```
+10. Usunięcie wszystkich przedmiotów
+```
+Metoda: DELETE
+Adres zasobu: localhost:8080/api/subjects
+Nagłówki: Content-Type: application/json
+Request Body: Brak
+
+Odpowiedź:
+HTTP Code: 200 OK
+Body: Brak
+```
+11. Pobranie wszystkich przedmiotów
+```
+Metoda: GET
+Adres zasobu: localhost:8080/api/subjects
+Nagłówki: Content-Type: application/json
+Request Body: Brak
+
+Odpowiedź:
+HTTP Code: 200 OK
+Body: Brak
+```

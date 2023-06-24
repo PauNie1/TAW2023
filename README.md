@@ -45,8 +45,9 @@ Odpowiedź:
 HTTP Code: 200 OK
 Body: brak
 ```
-Następnie wprowadzono resztę danych
-2. Pobranie wszystkich przedmiotów:
+Następnie wprowadzono resztę danych 
+
+2. Pobranie wszystkich przedmiotów
 ```
 Metoda: GET
 Adres zasobu: localhost:8080/api/subjects
@@ -100,4 +101,17 @@ Body:
         "exam": "tak"
     }
 ]
+```
+
+3. Pobranie przedmiotów, które mają egzamin
+```
+Metoda: GET
+Adres zasobu: localhost:8080/api/subjects?exam=tak
+Nagłówki: Content-Type: application/json
+Request Body: Brak
+
+Odpowiedź:
+HTTP Code: 200 OK
+Body:
+
 ```

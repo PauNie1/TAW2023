@@ -2,30 +2,12 @@
 
 **Dane do zaliczenia:**
 ```
- { "name": "Metodologie Obiektowe",
-    "ects": 2,
-    "room": "216",
-    "exam": "tak" }
- { "name": "Testowanie oprogramowania",
-    "ects": 1,
-    "room": "216",
-    "exam": "nie" }
- { "name": "Technologie i aplikacje webowe",
-    "ects": 3,
-    "room": "208",
-    "exam": "nie"}
- { "name": "Zarządzanie projektem informatycznym",
-    "ects": 2,
-    "room": "216",
-    "exam": "nie"}
- { "name": "Zaawansowane technologie bazodanowe",
-    "ects": 3,
-    "room": "208",
-    "exam": "nie"}
- { "name": "Technologie komponentowe i sieciowe",
-    "ects": 2,
-    "room": "208",
-    "exam": "tak"}
+ { "name": "Metodologie Obiektowe","ects": 2, "room": "216", "exam": "tak" }
+ { "name": "Testowanie oprogramowania","ects": 1, "room": "216", "exam": "nie" }
+ { "name": "Technologie i aplikacje webowe", "ects": 3, "room": "208","exam": "nie"}
+ { "name": "Zarządzanie projektem informatycznym", "ects": 2, "room": "216", "exam": "nie"}
+ { "name": "Zaawansowane technologie bazodanowe", "ects": 3, "room": "208", "exam": "nie"}
+ { "name": "Technologie komponentowe i sieciowe", "ects": 2, "room": "208", "exam": "tak"}
 ```
 Scenariusz do wykonania:
 1. Wprowadzenie przedmiotów do systemu w podanej kolejności:
@@ -47,17 +29,75 @@ Scenariusz do wykonania:
 11. Pobranie wszystkich przedmiotów.
 
 ** Wykonanie zadania: **
-
-
+1. Wprowadzenie danych
 ```
 Metoda: POST
-Adres zasobu: http://localhost:8080/api/activities
+Adres zasobu: localhost:8080/api/subjects
 Nagłówki: Content-Type: application/json
 Request Body:
 {
-"nazwa": "programowanie",
-"priorytet": 10
+"name": "Metodologie Obiektowe",
+"ects": 2,
+"room": "216",
+"exam": "tak" 
 }
 Odpowiedź:
 HTTP Code: 200 OK
 Body: brak
+```
+Następnie wprowadzono resztę danych
+2. Pobranie wszystkich przedmiotów:
+```
+Metoda: GET
+Adres zasobu: localhost:8080/api/subjects
+Nagłówki: Content-Type: application/json
+Request Body: Brak
+
+Odpowiedź:
+HTTP Code: 200 OK
+Body:
+[
+    {
+        "id": 1,
+        "name": "Metodologie Obiektowe",
+        "ects": 2,
+        "room": "216",
+        "exam": "tak"
+    },
+    {
+        "id": 2,
+        "name": "Testowanie oprogramowania",
+        "ects": 1,
+        "room": "216",
+        "exam": "nie"
+    },
+    {
+        "id": 3,
+        "name": "Technologie i aplikacje webowe",
+        "ects": 3,
+        "room": "208",
+        "exam": "nie"
+    },
+    {
+        "id": 4,
+        "name": "Zarządzanie projektem informatycznym",
+        "ects": 2,
+        "room": "216",
+        "exam": "nie"
+    },
+    {
+        "id": 5,
+        "name": "Zaawansowane technologie bazodanowe",
+        "ects": 3,
+        "room": "208",
+        "exam": "nie"
+    },
+    {
+        "id": 6,
+        "name": "Technologie komponentowe i sieciowe",
+        "ects": 2,
+        "room": "208",
+        "exam": "tak"
+    }
+]
+```

@@ -2,7 +2,7 @@
 
 docker nie działa mi na Windowsie
 
-# Dane do zaliczenia:
+ Dane do zaliczenia:
 ```
  { "name": "Metodologie Obiektowe","ects": 2, "room": "216", "exam": "tak" }
  { "name": "Testowanie oprogramowania","ects": 1, "room": "216", "exam": "nie" }
@@ -30,7 +30,7 @@ Scenariusz do wykonania:
 10. Usunięcie wszystkich przedmiotów,
 11. Pobranie wszystkich przedmiotów.
 
-** Wykonanie zadania: **
+# Wykonanie zadania: 
 1. Wprowadzenie danych
 ```
 Metoda: POST
